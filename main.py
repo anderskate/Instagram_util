@@ -15,8 +15,7 @@ def publish_photos():
 
 def main():
     load_dotenv()
-    if not os.path.exists('images'):
-        os.makedirs('images')
+    os.makedirs('images', exist_ok=True)
 
     fetch_spacex_last_launch('https://api.spacexdata.com/v3/launches/latest')
     fetch_hubble_pictures('http://hubblesite.org/api/v3/images?page=all&collection_name=printshop')
