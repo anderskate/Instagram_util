@@ -7,7 +7,7 @@ def fetch_hubble_pictures(url):
     ids_pictures = [picture_info['id'] for picture_info in collection_picture_information]
 
     for id_picture in ids_pictures:
-        url = 'http://hubblesite.org/api/v3/image/{}'.format(str(id_picture))
+        url = 'http://hubblesite.org/api/v3/image/{}'.format(id_picture)
         response = requests.get(url)
         images_data = response.json()['image_files']
 
