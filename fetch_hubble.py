@@ -18,7 +18,8 @@ def fetch_hubble_pictures(url):
         image_name = '{}.{}'.format(id_picture, extension_image)
         download_picture(picture_links[-1], image_name)
 
-        print('Картинка ' + image_name + ' успешно скачана!')
+        downloaded_picture_alert = 'Картинка {} успешно скачана!'.format(image_name)
+        print(downloaded_picture_alert)
 
 def get_extension_picture(link):
     chunks_links = link.split('.')
